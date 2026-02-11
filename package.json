@@ -6,7 +6,7 @@
     "dev:client": "cd client && npm run dev",
     "build": "cd client && npm run build",
     "start": "cd server && node index.js",
-    "install:all": "cd server && npm install && cd ../client && npm install",
+    "install:all": "cd server && npm install && cd ../client && npm install --include=dev",
     "render-build": "npm run install:all && npm run build",
     "test": "cd client && npm test && cd ../server && npm test"
   }
