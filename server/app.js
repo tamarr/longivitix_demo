@@ -107,7 +107,8 @@ app.use((err, req, res, next) => {
 // Serve client build in production
 app.use(express.static(join(__dirname, "../client/dist")))
 
-app.use((req, res) => {
+app.use((req, res, next) => {
+  if (req.method !== "GET" || req.path.startsWith("/api")) return next()
   res.sendFile(join(__dirname, "../client/dist/index.html"))
 })
 

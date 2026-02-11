@@ -36,9 +36,9 @@ cd client && npm test
 cd server && npm test
 ```
 
-## Deploy (Render)
+## Deploy (Render) - Demo only
 
-The app is configured for single-service deployment — Express serves the built React client in production.
+For demo purposes the app is configured for single-service deployment — Express serves the built React client in production. In a real product it will make more sense to separate into the web server and the static react.
 
 1. Create a **Web Service** on Render and connect your repo
 2. Set the `OPENAI_API_KEY` environment variable in the Render dashboard
