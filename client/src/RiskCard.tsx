@@ -1,7 +1,16 @@
 import { useState } from "react"
 import "./RiskCard.css"
 
-export default function RiskCard({ risk, index }) {
+interface RiskCardProps {
+  risk: {
+    title: string
+    explanation: string
+    action: string
+  }
+  index: number
+}
+
+export default function RiskCard({ risk, index }: RiskCardProps) {
   const [expanded, setExpanded] = useState(false)
 
   return (
